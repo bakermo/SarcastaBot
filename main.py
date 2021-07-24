@@ -1,7 +1,14 @@
 import discord
 import os
 import random
+from flask import Flask
+app = Flask(__name__)
 
+@app.route("/")
+def hello():
+    client.run(os.getenv('TOKEN'))
+    return "Sarcasta BOT Initialized"
+  
 client = discord.Client()
 
 @client.event
